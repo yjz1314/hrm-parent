@@ -12,6 +12,7 @@
         <module>hrm-basic-parent</module>
         <module>hrm-supports-parent</module>
         <module>hrm-system-prent</module>
+        <module>hrm-course-parent</module>
     </modules>
 
     <properties>
@@ -50,6 +51,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.16</version>
         </dependency>
     </dependencies>
 
