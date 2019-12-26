@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="80607554-9efd-48ee-8ac4-8afb03e38a4c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$1.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$1.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$2.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$2.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$3.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$3.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$4.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$4.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$5.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator$5.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator.class" afterPath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/target/classes/cn/itsource/hrm/generator/CodeGenerator.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-supports-parent/hrm-zuul-gateway/target/classes/application.yml" afterPath="$PROJECT_DIR$/hrm-supports-parent/hrm-zuul-gateway/target/classes/application.yml" />
-      <change beforePath="$PROJECT_DIR$/hrm-supports-parent/hrm-zuul-gateway/target/classes/cn/itsource/hrm/config/DocumentationConfig.class" afterPath="$PROJECT_DIR$/hrm-supports-parent/hrm-zuul-gateway/target/classes/cn/itsource/hrm/config/DocumentationConfig.class" />
-      <change beforePath="$PROJECT_DIR$/hrm-system-prent/hrm-system-service/target/classes/application.yml" afterPath="$PROJECT_DIR$/hrm-system-prent/hrm-system-service/target/classes/application.yml" />
-      <change beforePath="$PROJECT_DIR$/hrm-system-prent/hrm-system-service/target/classes/cn/itsource/hrm/SystemServiceApplication.class" afterPath="$PROJECT_DIR$/hrm-system-prent/hrm-system-service/target/classes/cn/itsource/hrm/SystemServiceApplication.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -694,7 +684,7 @@
       <workItem from="1577235937284" duration="77000" />
       <workItem from="1577236024149" duration="10497000" />
       <workItem from="1577275342591" duration="80000" />
-      <workItem from="1577322097188" duration="8143000" />
+      <workItem from="1577322097188" duration="8212000" />
     </task>
     <task id="LOCAL-00001" summary="v1.1">
       <created>1577330262291</created>
@@ -703,11 +693,18 @@
       <option name="project" value="LOCAL" />
       <updated>1577330262291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v1.1">
+      <created>1577330284412</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577330284412</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30797000" />
+    <option name="totallyTimeSpent" value="30866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -731,11 +728,11 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run Dashboard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3166287" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31435078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25590128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25590128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -756,6 +753,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="v1.1" />
     <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
   </component>
