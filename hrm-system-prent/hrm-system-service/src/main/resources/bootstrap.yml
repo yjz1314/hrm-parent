@@ -1,0 +1,11 @@
+spring:
+  application:
+      name: SYSTEM-GATEWAY
+  cloud:
+    config:
+      name: application-system
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER #通过配置中心获取注册列表
+  profiles:
+    active: dev

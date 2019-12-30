@@ -21,6 +21,21 @@
             <artifactId>itsource-hrm-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--spring cloud config 客户端-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.itsource</groupId>
+            <artifactId>hrm-common-redis-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
     </dependencies>
 
     <build>

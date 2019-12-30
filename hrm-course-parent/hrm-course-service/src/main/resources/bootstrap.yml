@@ -1,0 +1,21 @@
+spring:
+  application:
+      name: COURSE-GATEWAY
+  cloud:
+    config:
+      name: application-course
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER #通过配置中心获取注册列表
+  profiles:
+    active: dev
+feign:
+  hystrix:
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMilliseconds: 5000 # 设置hystrix的超时时间为5000ms
+
+

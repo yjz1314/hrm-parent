@@ -1,0 +1,31 @@
+spring:
+  application:
+      name: ZUUL-GATEWAY
+  cloud:
+    config:
+      name: application-zuul
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER #通过配置中心获取注册列表
+  profiles:
+    active: dev
+
+#在加载配置文件之前要先将自己注册到eureka中
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+hystrix:
+  command:
+    course-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 25000
+
+ribbon:
+  ReadTimeout: 25000
+  SocketTimeout: 25000

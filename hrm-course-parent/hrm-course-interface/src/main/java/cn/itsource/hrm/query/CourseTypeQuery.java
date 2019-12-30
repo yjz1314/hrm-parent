@@ -9,7 +9,7 @@ import cn.itsource.hrm.query.BaseQuery;
  * </p>
  *
  * @author yjz
- * @since 2019-12-26
+ * @since 2019-12-29
  */
 public class CourseTypeQuery extends BaseQuery {
 
