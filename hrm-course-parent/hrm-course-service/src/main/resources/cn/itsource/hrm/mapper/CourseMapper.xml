@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.hrm.mapper.CourseMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.hrm.domain.Course">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="users" property="users" />
+        <result column="course_type_id" property="courseTypeId" />
+        <result column="grade" property="grade" />
+        <result column="status" property="status" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="tenantName" property="tenantName" />
+        <result column="user_id" property="userId" />
+        <result column="userName" property="userName" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+    </resultMap>
+
+    <resultMap id="CourseMap" type="cn.itsource.hrm.domain.Course">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="users" property="users" />
+        <result column="course_type_id" property="courseTypeId" />
+        <result column="grade" property="grade" />
+        <result column="status" property="status" />
+        <result column="tenant_id" property="tenantId" />
+        <result column="tenantName" property="tenantName" />
+        <result column="user_id" property="userId" />
+        <result column="userName" property="userName" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <association property="courseType" javaType="cn.itsource.hrm.domain.CourseType">
+            <id column="cpid" property="id"/>
+            <result column="cpname" property="name"/>
+        </association>
+    </resultMap>
+
+    <select id="countByQuery" resultType="java.lang.Long">
+        SELECT
+        count(*)
+        FROM
+        t_course c
+        LEFT JOIN t_course_type cp ON c.course_type_id = cp.id
+        <include refid="whereSql"/>
+    </select>
+
+    <select id="myPage" resultMap="CourseMap">
+        SELECT
+        c.*, cp.id cpid,
+        cp. NAME cpname
+        FROM
+        t_course c
+        LEFT JOIN t_course_type cp ON c.course_type_id = cp.id
+        <include refid="whereSql"/>
+    </select>
+
+    <sql id="whereSql">
+        <where>
+            <if test="query.keyword!=null and query.keyword!=''">
+                AND (
+                c.name LIKE concat('%',#{query.keyword},'%')
+                )
+            </if>
+            <if test="query.status!=null">
+                and c.status = #{query.status}
+            </if>
+        </where>
+    </sql>
+
+</mapper>
