@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/hrm-basic-parent/hrm-basic-util" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hrm-basic-parent/itsource-hrm-spring-boot-starter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hrm-common-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-file-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-file-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-redis-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-redis-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hrm-course-parent" charset="UTF-8" />

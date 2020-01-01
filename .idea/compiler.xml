@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hrm-basic-generator" />
         <module name="hrm-basic-util" />
+        <module name="hrm-common-file-interface" />
+        <module name="hrm-common-file-service" />
         <module name="hrm-common-redis-interface" />
         <module name="hrm-common-redis-service" />
         <module name="hrm-config-server" />
@@ -24,6 +26,8 @@
       <module name="hrm-basic-generator" target="1.8" />
       <module name="hrm-basic-parent" target="1.8" />
       <module name="hrm-basic-util" target="1.8" />
+      <module name="hrm-common-file-interface" target="1.8" />
+      <module name="hrm-common-file-service" target="1.8" />
       <module name="hrm-common-parent" target="1.8" />
       <module name="hrm-common-redis-interface" target="1.8" />
       <module name="hrm-common-redis-service" target="1.8" />

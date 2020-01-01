@@ -1,31 +1,36 @@
-spring:
-  application:
-      name: ZUUL-GATEWAY
-  cloud:
-    config:
-      name: application-zuul
-      discovery:
-        enabled: true
-        service-id: CONFIG-SERVER #通过配置中心获取注册列表
-  profiles:
-    active: dev
-
-#在加载配置文件之前要先将自己注册到eureka中
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+spring:
+  application:
+    name: ZUUL-GATEWAY
+  cloud:
+    config:
+      name: application-zuul
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER #通过配置中心的服务端的注册名称拉取集群的注册列表
+  profiles:
+    active: dev
+zuul:
+  host:
+    connect-timeout-millis: 15000 #HTTP连接超时要比Hystrix的大
+    socket-timeout-millis: 60000   #socket超时
 
+
+#zuul的hystrix超时配置
 hystrix:
   command:
     course-service:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 25000
+            timeoutInMilliseconds: 5000
 
+#配置zuul的ribbon的超时时间
 ribbon:
-  ReadTimeout: 25000
-  SocketTimeout: 25000
+  ReadTimeout: 5000
+  SocketTimeout: 5000
