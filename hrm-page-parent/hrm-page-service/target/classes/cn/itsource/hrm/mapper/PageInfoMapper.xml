@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itsource.hrm.mapper.PageInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.itsource.hrm.domain.PageInfo">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="alias" property="alias" />
+        <result column="type" property="type" />
+        <result column="physicalPath" property="physicalPath" />
+        <result column="createTime" property="createTime" />
+        <result column="site_id" property="siteId" />
+        <result column="template_url" property="templateUrl" />
+    </resultMap>
+
+
+    <select id="selectByPage" resultType="cn.itsource.hrm.domain.PageInfo">
+        SELECT
+        pi.*,
+        pc.data_key "pageConfig.dataKey",
+        pc.page_url "pageConfig.pageUrl"
+        FROM
+        t_page_info pi
+        LEFT JOIN t_page_config pc ON pi.id = pc.page_id
+    </select>
+
+
+</mapper>
