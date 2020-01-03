@@ -87,4 +87,26 @@ public class CourseController {
 //        return new PageList<>(page.getTotal(), page.getRecords());
         return courseService.findPage(query);
     }
+
+    @PostMapping("/online")
+    public AjaxResult online(@RequestBody List<Long> ids){
+        try {
+            courseService.online(ids);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("失败!"+e.getMessage());
+        }
+    }
+    @PostMapping("/offline")
+    public AjaxResult offline(@RequestBody List<Long> ids){
+        try {
+            courseService.offline(ids);
+            return AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("失败!"+e.getMessage());
+        }
+    }
+
 }

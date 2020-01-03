@@ -1,6 +1,6 @@
 spring:
   application:
-      name: SYSTEM-GATEWAY
+      name: SYSTEM-SERVICE
   cloud:
     config:
       name: application-system

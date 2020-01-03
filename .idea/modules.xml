@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/hrm-basic-generator.iml" filepath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-generator/hrm-basic-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-basic-parent/hrm-basic-parent.iml" filepath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-basic-parent/hrm-basic-util/hrm-basic-util.iml" filepath="$PROJECT_DIR$/hrm-basic-parent/hrm-basic-util/hrm-basic-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-es-interface/hrm-common-es-interface.iml" filepath="$PROJECT_DIR$/hrm-common-parent/hrm-common-es-interface/hrm-common-es-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-es-service/hrm-common-es-service.iml" filepath="$PROJECT_DIR$/hrm-common-parent/hrm-common-es-service/hrm-common-es-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-file-interface/hrm-common-file-interface.iml" filepath="$PROJECT_DIR$/hrm-common-parent/hrm-common-file-interface/hrm-common-file-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-file-service/hrm-common-file-service.iml" filepath="$PROJECT_DIR$/hrm-common-parent/hrm-common-file-service/hrm-common-file-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-common-parent/hrm-common-parent.iml" filepath="$PROJECT_DIR$/hrm-common-parent/hrm-common-parent.iml" />
@@ -15,6 +17,9 @@
       <module fileurl="file://$PROJECT_DIR$/hrm-course-parent/hrm-course-parent.iml" filepath="$PROJECT_DIR$/hrm-course-parent/hrm-course-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-course-parent/hrm-course-service/hrm-course-service.iml" filepath="$PROJECT_DIR$/hrm-course-parent/hrm-course-service/hrm-course-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-supports-parent/hrm-eureka-server/hrm-eureka-server.iml" filepath="$PROJECT_DIR$/hrm-supports-parent/hrm-eureka-server/hrm-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-page-parent/hrm-page-interface/hrm-page-interface.iml" filepath="$PROJECT_DIR$/hrm-page-parent/hrm-page-interface/hrm-page-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-page-parent/hrm-page-parent.iml" filepath="$PROJECT_DIR$/hrm-page-parent/hrm-page-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hrm-page-parent/hrm-page-service/hrm-page-service.iml" filepath="$PROJECT_DIR$/hrm-page-parent/hrm-page-service/hrm-page-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-parent.iml" filepath="$PROJECT_DIR$/hrm-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-supports-parent/hrm-supports-parent.iml" filepath="$PROJECT_DIR$/hrm-supports-parent/hrm-supports-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/hrm-system-prent/hrm-system-interface/hrm-system-interface.iml" filepath="$PROJECT_DIR$/hrm-system-prent/hrm-system-interface/hrm-system-interface.iml" />

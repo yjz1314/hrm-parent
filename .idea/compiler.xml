@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hrm-basic-generator" />
         <module name="hrm-basic-util" />
+        <module name="hrm-common-es-interface" />
+        <module name="hrm-common-es-service" />
         <module name="hrm-common-file-interface" />
         <module name="hrm-common-file-service" />
         <module name="hrm-common-redis-interface" />
@@ -16,6 +18,8 @@
         <module name="hrm-course-interface" />
         <module name="hrm-course-service" />
         <module name="hrm-eureka-server" />
+        <module name="hrm-page-interface" />
+        <module name="hrm-page-service" />
         <module name="hrm-system-interface" />
         <module name="hrm-system-service" />
         <module name="hrm-zuul-gateway" />
@@ -26,6 +30,8 @@
       <module name="hrm-basic-generator" target="1.8" />
       <module name="hrm-basic-parent" target="1.8" />
       <module name="hrm-basic-util" target="1.8" />
+      <module name="hrm-common-es-interface" target="1.8" />
+      <module name="hrm-common-es-service" target="1.8" />
       <module name="hrm-common-file-interface" target="1.8" />
       <module name="hrm-common-file-service" target="1.8" />
       <module name="hrm-common-parent" target="1.8" />
@@ -36,6 +42,9 @@
       <module name="hrm-course-parent" target="1.8" />
       <module name="hrm-course-service" target="1.8" />
       <module name="hrm-eureka-server" target="1.8" />
+      <module name="hrm-page-interface" target="1.8" />
+      <module name="hrm-page-parent" target="1.8" />
+      <module name="hrm-page-service" target="1.8" />
       <module name="hrm-parent" target="1.8" />
       <module name="hrm-supports-parent" target="1.8" />
       <module name="hrm-system-interface" target="1.8" />

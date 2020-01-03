@@ -5,6 +5,8 @@ import cn.itsource.hrm.query.CourseQuery;
 import cn.itsource.hrm.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  *  服务类
@@ -16,4 +18,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface ICourseService extends IService<Course> {
 
     PageList<Course> findPage(CourseQuery query);
+
+    /**
+     * 上线
+     * @param ids
+     */
+    void online(List<Long> ids);
+    void offline(List<Long> ids);
 }

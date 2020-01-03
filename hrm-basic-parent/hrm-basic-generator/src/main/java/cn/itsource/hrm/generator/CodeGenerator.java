@@ -16,7 +16,8 @@ public class CodeGenerator {
 
 //        ResourceBundle rb = ResourceBundle.getBundle("system-generator");
 //        ResourceBundle rb = ResourceBundle.getBundle("system1-generator");
-        ResourceBundle rb = ResourceBundle.getBundle("course-generator");
+//        ResourceBundle rb = ResourceBundle.getBundle("course-generator");
+        ResourceBundle rb = ResourceBundle.getBundle("page-generator");
         AutoGenerator mpg = new AutoGenerator();
 
         // 全局配置
@@ -117,8 +118,10 @@ public class CodeGenerator {
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setEntityLombokModel(true);
 //        strategy.setInclude("t_course_type");//生成的表
+        strategy.setInclude("");//防止误点
+//        strategy.setInclude("t_page_info","t_page_config","t_site");//生成的表
 //        strategy.setInclude("t_department","t_employee","t_employee_role","t_meal","t_meal_permission","t_menu","t_permission","t_role","t_role_permission","t_tenant","t_tenant_meal","t_tenant_type");
-        strategy.setInclude("t_course","t_course_detail","t_course_market","t_course_resource");//生成的表
+//        strategy.setInclude("t_course","t_course_detail","t_course_market","t_course_resource");//生成的表
         strategy.setTablePrefix("t_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new VelocityTemplateEngine());

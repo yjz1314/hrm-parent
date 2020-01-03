@@ -22,6 +22,7 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+
         <!--spring cloud config 客户端-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

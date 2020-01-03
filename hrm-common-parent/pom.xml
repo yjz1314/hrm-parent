@@ -16,6 +16,8 @@
         <module>hrm-common-redis-interface</module>
         <module>hrm-common-file-interface</module>
         <module>hrm-common-file-service</module>
+        <module>hrm-common-es-interface</module>
+        <module>hrm-common-es-service</module>
     </modules>
 
 

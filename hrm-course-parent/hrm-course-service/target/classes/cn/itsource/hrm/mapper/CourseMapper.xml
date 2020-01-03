@@ -36,6 +36,24 @@
             <result column="cpname" property="name"/>
         </association>
     </resultMap>
+    <update id="online">
+
+        UPDATE t_course
+        SET  status=1,start_time = #{time}
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="offline">
+        UPDATE t_course
+        SET  status=0,start_time = #{time}
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+
+    </update>
 
     <select id="countByQuery" resultType="java.lang.Long">
         SELECT
