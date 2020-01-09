@@ -15,5 +15,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IPageInfoService extends IService<PageInfo> {
 
-    PageList<PageInfo> getByQuery(PageInfoQuery query);
+    PageList<PageInfo> pageByQuery(PageInfoQuery query);
 }

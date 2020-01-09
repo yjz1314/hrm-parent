@@ -2,6 +2,7 @@ package cn.itsource.hrm.service.impl;
 
 import cn.itsource.hrm.client.CourseEsClient;
 import cn.itsource.hrm.client.SystemDictionaryitemClient;
+import cn.itsource.hrm.document.CourseDocumentQuery;
 import cn.itsource.hrm.document.CourseDoucment;
 import cn.itsource.hrm.domain.*;
 import cn.itsource.hrm.mapper.*;
@@ -114,4 +115,12 @@ public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> impleme
         baseMapper.offline(ids,System.currentTimeMillis());
         courseEsClient.deleteIndexes(ids);
     }
+
+    @Override
+    public PageList<CourseDoucment> pageOnline(CourseQuery query) {
+        CourseDocumentQuery documentQuery = new CourseDocumentQuery();
+        BeanUtils.copyProperties(query, documentQuery);
+        return courseEsClient.searchIndexs(documentQuery);
+    }
+
 }

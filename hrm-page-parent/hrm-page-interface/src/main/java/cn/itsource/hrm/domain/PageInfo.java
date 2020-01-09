@@ -54,14 +54,18 @@ public class PageInfo extends Model<PageInfo> {
      * 模板在hdfs中的路径地址
      */
     private String templateUrl;
+    private String templateFile;
+
+    @TableField(exist = false)
+    private PageConfig pageConfig;
+
+    @TableField(exist = false)
+    private Site site;
 
 
     @Override
     protected Serializable pkVal() {
         return this.id;
     }
-
-    @TableField(exist = false)
-    private PageConfig pageConfig;
 
 }

@@ -1,0 +1,19 @@
+spring:
+  application:
+      name: STATIC-SERVICE
+  cloud:
+    config:
+      name: application-static
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+  profiles:
+    active: dev
+
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: guest
+  password: guest
+  virtualHost: /
+

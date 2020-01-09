@@ -1,11 +1,10 @@
 package cn.itsource.hrm.web.controller;
 
-import cn.itsource.hrm.service.IPageInfoService;
 import cn.itsource.hrm.domain.PageInfo;
 import cn.itsource.hrm.query.PageInfoQuery;
+import cn.itsource.hrm.service.IPageInfoService;
 import cn.itsource.hrm.util.AjaxResult;
 import cn.itsource.hrm.util.PageList;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -86,6 +85,6 @@ public class PageInfoController {
     public PageList<PageInfo> page(@RequestBody PageInfoQuery query) {
 //        Page<PageInfo> page = pageInfoService.page(new Page<PageInfo>(query.getPage(), query.getRows()));
 //        return new PageList<>(page.getTotal(), page.getRecords());
-        return pageInfoService.getByQuery(query);
+        return pageInfoService.pageByQuery(query);
     }
 }

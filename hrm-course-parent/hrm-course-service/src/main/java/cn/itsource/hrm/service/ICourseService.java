@@ -1,5 +1,6 @@
 package cn.itsource.hrm.service;
 
+import cn.itsource.hrm.document.CourseDoucment;
 import cn.itsource.hrm.domain.Course;
 import cn.itsource.hrm.query.CourseQuery;
 import cn.itsource.hrm.util.PageList;
@@ -25,4 +26,6 @@ public interface ICourseService extends IService<Course> {
      */
     void online(List<Long> ids);
     void offline(List<Long> ids);
+
+    PageList<CourseDoucment> pageOnline(CourseQuery query);
 }

@@ -18,6 +18,8 @@
         <module>hrm-common-file-service</module>
         <module>hrm-common-es-interface</module>
         <module>hrm-common-es-service</module>
+        <module>hrm-common-page-interface</module>
+        <module>hrm-common-page-service</module>
     </modules>
 
 

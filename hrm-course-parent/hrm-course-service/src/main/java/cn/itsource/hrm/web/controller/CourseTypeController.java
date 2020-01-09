@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Description: 课程目录 web.controller
@@ -91,4 +92,21 @@ public class CourseTypeController {
     public List<CourseType> treeData(){
         return courseTypeService.loadTreeData();
     }
+
+    @GetMapping("/staticCourseIndex")
+    public AjaxResult staticCourseIndexPage(Long pageId){
+        try {
+            courseTypeService.staticCourseIndex(pageId);
+            return  AjaxResult.me();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("失败!"+e.getMessage());
+        }
+    }
+    @GetMapping("/crumbs")
+    public List<Map<String,Object>> getCrumbs(@RequestParam("courseTypeId") Long courseTypeId){
+        return courseTypeService.getCrumbs(courseTypeId);
+    }
+
+
 }

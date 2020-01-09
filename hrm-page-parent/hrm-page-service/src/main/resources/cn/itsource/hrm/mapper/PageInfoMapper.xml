@@ -13,6 +13,27 @@
         <result column="site_id" property="siteId" />
         <result column="template_url" property="templateUrl" />
     </resultMap>
+    <resultMap id="PageInfoMap" type="cn.itsource.hrm.domain.PageInfo">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="alias" property="alias" />
+        <result column="type" property="type" />
+        <result column="physicalPath" property="physicalPath" />
+        <result column="createTime" property="createTime" />
+        <result column="site_id" property="siteId" />
+        <result column="template_url" property="templateUrl" />
+        <result column="template_file" property="templateFile" />
+        <association property="pageConfig" javaType="cn.itsource.hrm.domain.PageConfig">
+            <id column="pcid" property="id"/>
+            <result column="data_key" property="dataKey"/>
+            <result column="page_url" property="pageUrl"/>
+        </association>
+        <association property="site" javaType="cn.itsource.hrm.domain.Site">
+            <id column="sid" property="id"/>
+            <result column="sname" property="name"/>
+            <result column="ssn" property="sn"/>
+        </association>
+    </resultMap>
 
 
     <select id="selectByPage" resultType="cn.itsource.hrm.domain.PageInfo">
@@ -23,6 +44,19 @@
         FROM
         t_page_info pi
         LEFT JOIN t_page_config pc ON pi.id = pc.page_id
+    </select>
+    <select id="selectByQuery" resultMap="PageInfoMap">
+        SELECT
+        pi.*, pc.id pcid,
+        pc.data_key,
+        pc.page_url,
+        s.id sid,
+        s.name sname,
+        s.sn ssn
+        FROM
+        t_page_info pi
+        LEFT JOIN t_page_config pc ON pi.id = pc.page_id
+        LEFT JOIN t_site s ON s.id = pi.site_id
     </select>
 
 

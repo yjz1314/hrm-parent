@@ -18,4 +18,5 @@ import org.apache.ibatis.annotations.Param;
 public interface PageInfoMapper extends BaseMapper<PageInfo> {
     IPage<PageInfo> selectByPage(Page page, @Param("query") PageInfoQuery query);
 
+    IPage<PageInfo> selectByQuery(Page page, PageInfoQuery query);
 }

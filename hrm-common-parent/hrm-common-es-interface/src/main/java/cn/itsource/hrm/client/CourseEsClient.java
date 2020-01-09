@@ -1,8 +1,10 @@
 package cn.itsource.hrm.client;
 
 import cn.itsource.hrm.client.impl.CourseEsFallback;
+import cn.itsource.hrm.document.CourseDocumentQuery;
 import cn.itsource.hrm.document.CourseDoucment;
 import cn.itsource.hrm.util.AjaxResult;
+import cn.itsource.hrm.util.PageList;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,4 +28,7 @@ public interface CourseEsClient {
      */
     @PostMapping("/delete")
     AjaxResult deleteIndexes(@RequestBody List<Long> ids);
+
+    @PostMapping("/search")
+    PageList<CourseDoucment> searchIndexs(@RequestBody CourseDocumentQuery documentQuery);
 }

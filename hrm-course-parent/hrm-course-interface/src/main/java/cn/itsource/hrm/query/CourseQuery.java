@@ -14,4 +14,13 @@ import lombok.Data;
 public class CourseQuery extends BaseQuery {
     private Integer status;
 
+    private Long courseTypeId;
+
+    private Double minPrice;
+    private Double maxPrice;
+
+    //排序
+    private String orderField;// jg 表示price列   xp 表示startTime列
+    private Integer orderType;//1 表示降序  0表示升序
+
 }

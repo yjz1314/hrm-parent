@@ -1,5 +1,6 @@
 package cn.itsource.hrm.web.controller;
 
+import cn.itsource.hrm.document.CourseDoucment;
 import cn.itsource.hrm.domain.Course;
 import cn.itsource.hrm.query.CourseQuery;
 import cn.itsource.hrm.service.ICourseService;
@@ -107,6 +108,11 @@ public class CourseController {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage("失败!"+e.getMessage());
         }
+    }
+
+    @PostMapping("/pageOnline")
+    public PageList<CourseDoucment> pageOnline(@RequestBody CourseQuery query ){
+        return courseService.pageOnline(query);
     }
 
 }

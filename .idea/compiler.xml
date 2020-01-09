@@ -12,12 +12,15 @@
         <module name="hrm-common-es-service" />
         <module name="hrm-common-file-interface" />
         <module name="hrm-common-file-service" />
+        <module name="hrm-common-page-interface" />
+        <module name="hrm-common-page-service" />
         <module name="hrm-common-redis-interface" />
         <module name="hrm-common-redis-service" />
         <module name="hrm-config-server" />
         <module name="hrm-course-interface" />
         <module name="hrm-course-service" />
         <module name="hrm-eureka-server" />
+        <module name="hrm-page-agent" />
         <module name="hrm-page-interface" />
         <module name="hrm-page-service" />
         <module name="hrm-system-interface" />
@@ -34,6 +37,8 @@
       <module name="hrm-common-es-service" target="1.8" />
       <module name="hrm-common-file-interface" target="1.8" />
       <module name="hrm-common-file-service" target="1.8" />
+      <module name="hrm-common-page-interface" target="1.8" />
+      <module name="hrm-common-page-service" target="1.8" />
       <module name="hrm-common-parent" target="1.8" />
       <module name="hrm-common-redis-interface" target="1.8" />
       <module name="hrm-common-redis-service" target="1.8" />
@@ -42,6 +47,7 @@
       <module name="hrm-course-parent" target="1.8" />
       <module name="hrm-course-service" target="1.8" />
       <module name="hrm-eureka-server" target="1.8" />
+      <module name="hrm-page-agent" target="1.8" />
       <module name="hrm-page-interface" target="1.8" />
       <module name="hrm-page-parent" target="1.8" />
       <module name="hrm-page-service" target="1.8" />

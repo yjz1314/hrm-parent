@@ -1,9 +1,11 @@
 package cn.itsource.hrm.service.impl;
 
+import cn.itsource.hrm.client.PageClient;
 import cn.itsource.hrm.client.RedisClient;
 import cn.itsource.hrm.domain.CourseType;
 import cn.itsource.hrm.mapper.CourseTypeMapper;
 import cn.itsource.hrm.service.ICourseTypeService;
+import cn.itsource.hrm.util.StrUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -29,6 +31,9 @@ import java.util.Map;
 public class CourseTypeServiceImpl extends ServiceImpl<CourseTypeMapper, CourseType> implements ICourseTypeService {
     @Autowired
     private RedisClient redisClient;
+
+    @Autowired
+    private PageClient pageClienat;
 
     private final String COURSE_TYPE = "hrm:course_type:treeData";
 
@@ -180,4 +185,54 @@ public class CourseTypeServiceImpl extends ServiceImpl<CourseTypeMapper, CourseT
         synOperate();
         return true;
     }
+
+    @Override
+    public void staticCourseIndex(Long pageId) {
+        //查询数据存放到redis中
+        String dataKey = initData(pageId);
+        //调用页面静态化的接口（接口中将生成的页面上传到fastdfs中，并且发送消息到mq）
+        pageClienat.staticPage(dataKey,pageId);
+    }
+
+    private String initData(Long pageId) {
+        List<CourseType> courseTypes = loadTreeDataLoop();
+        String jsonString = JSONObject.toJSONString(courseTypes);
+        String key = "page:"+pageId+":courseTypes";
+        redisClient.set(key, jsonString);
+
+        return key;
+    }
+
+    @Override
+    public List<Map<String, Object>> getCrumbs(Long courseTypeId) {
+
+        List<Map<String, Object>> list = new ArrayList<>();
+
+        //根据当前类型查询 当前类型的所有级别父类型
+        CourseType courseType = baseMapper.selectById(courseTypeId);
+        String path = courseType.getPath();
+        //分割  .
+        String longStrs = path.replaceAll("\\.", ",").substring(1);
+        List<Long> ids = StrUtils.splitStr2LongArr(longStrs);
+        //循环ids，封装数据
+        for (Long id : ids) {
+            Map<String,Object> map = new HashMap<>();
+            //当前类型
+            CourseType currentType = baseMapper.selectById(id);
+            map.put("currentType", currentType);
+            //同级别类型
+            List<CourseType> otherTypes = baseMapper.selectList(
+                    new QueryWrapper<CourseType>()
+                            .eq("pid", currentType.getPid())
+                            .ne("id", currentType.getId())
+            );
+            map.put("otherTypes", otherTypes);
+
+            list.add(map);
+        }
+
+
+        return list;
+    }
+
 }

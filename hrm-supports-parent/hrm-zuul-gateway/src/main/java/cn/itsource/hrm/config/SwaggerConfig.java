@@ -24,7 +24,7 @@ public class SwaggerConfig {
                 .title("分布式人力資源系统")
                 .description("人力資源系统接口文档说明")
                 .termsOfServiceUrl("http://localhost:8081")
-                .contact(new Contact("yphtest", "", "yhp@itsoruce.cn"))
+                .contact(new Contact("yjzhtest", "", "yjz@itsoruce.cn"))
                 .version("1.0")
                 .build();
     }
